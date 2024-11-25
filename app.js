@@ -8,7 +8,7 @@ const myApiKey = "7ed02e80"; // Your OMDb API Key
 // Function to fetch movie suggestions
 const getMovieSuggestions = async (query) => {
     if (query.length < 3) return; // Only start searching after 3 characters
-    const url = `http://www.omdbapi.com/?apikey=${myApiKey}&s=${query}`;
+    const url = `https://www.omdbapi.com/?apikey=${myApiKey}&s=${query}`; // Updated to HTTPS
 
     try {
         const response = await fetch(url);
@@ -44,7 +44,7 @@ inputBox.addEventListener('input', (e) => {
 
 // Function to fetch and display movie details
 const getMovieInfo = async (movie) => {
-    const url = `http://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`;
+    const url = `https://www.omdbapi.com/?apikey=${myApiKey}&t=${movie}`; // Updated to HTTPS
 
     try {
         const response = await fetch(url);
